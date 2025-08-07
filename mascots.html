@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Never Land - Mascots</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="vintage-border">
+        <div class="circus-lights">
+            <div class="light red"></div>
+            <div class="light blue"></div>
+            <div class="light yellow"></div>
+            <div class="light green"></div>
+            <div class="light purple"></div>
+        </div>
+        
+        <header>
+            <h1 class="neon">NEVER LAND CIRCUS</h1>
+            <p class="subtitle">MASCOTS</p>
+        </header>
+        
+        <nav class="main-nav">
+            <button onclick="location.href='index.html'" class="nav-btn red">HOME</button>
+            <button onclick="location.href='about.html'" class="nav-btn blue">ABOUT</button>
+            <button onclick="location.href='404.html'" class="nav-btn yellow">SHOWS</button>
+            <button onclick="location.href='tickets.html'" class="nav-btn green">TIKETS</button>
+        </nav>
+        
+        <main>
+            <div class="marquee">
+                <span>⚠️ WARNING: MASCOTS MAY APPEAR DIFFERENTLY THAN SHOWN</span>
+            </div>
+
+            <div class="mascot-grid">
+                
+                <div class="mascot-card">
+                    <a href="mascots/buster.html"><img src="https://i.imgur.com/XyZ9aBm.jpg" alt="The Barker" class="mascot-img"></a>
+                    <div class="mascot-info">
+                        <h3 style="text-transform:uppercase;">BUSTER BUNNY</h3>
+                        <p class="mascot-desc">Buster Bunny is a slick, blue-and-white rabbit with a sharp grin and even sharper reflexes. He doesn’t wear clothes — just a bold pair of neon orange gloves that flash like warning lights every time he moves. His fur is smooth and clean, with a cool electric-blue tone across his back and ears, and bright white on his face, chest, and feet. Simple. Iconic. Fast. Buster’s got attitude for days — laid-back but alert, calm under pressure, and always ready with a smart remark or a sudden burst of speed. He thrives on chaos, zipping through trouble with ease, leaving behind only a smirk and a spinning puff of dust. Whether he's pranking a rival or escaping a trap, he always makes it look effortless. He doesn’t run from problems — he dances around them, usually while munching on a carrot like it's no big deal. Catchphrase:“What’s up, buddie?”</p>
+                    </div>
+                </div>
+
+                
+                <div class="mascot-card">
+                    <a href="mascots/wally.html"><img src="https://i.imgur.com/AbC123d.jpg" alt="The Twins" class="mascot-img"></a>
+                    <div class="mascot-info">
+                        <h3 style="text-transform:uppercase;">Wally Wolf</h3>
+                        <p class="mascot-desc">Wally Wolf is a scruffy, bare-furred bad dude, rocking nothing but his iconic dark purple gloves — because clothes are for squares! He struts around with the confidence of a VHS action hero, chest puffed out like he’s about to drop the hottest mixtape of the decade. His dark gray fur’s got that “just rolled outta the alley” look, complete with a wild mane that screams “radical!” With a gravelly voice that sounds like a broken cassette stuck on growl mode, Wally throws down snarls and poses like he’s the boss of the neon-lit streets. But don’t be fooled — his totally tubular “bad guy” moves usually end with him wiping out spectacularly, tripping on his own tail, or getting tangled up like a gnarly Rubik’s Cube.</p>
+                    </div>
+                </div>
+
+                
+                <div class="mascot-card">
+                    <a href="mascots/stutz.html"><img src="https://i.imgur.com/JxQy3Fj.jpg" alt="The Beast" class="mascot-img"></a>
+                    <div class="mascot-info">
+                        <h3 style="text-transform:uppercase;">Stutz the frog</h3>
+                        <p class="mascot-desc">Stutz the Frog is a sleek, mysterious figure with smooth sapphire-blue skin patterned with striking black spots, giving him a hypnotic, almost otherworldly appearance. His sharp, calculating eyes gleam with intelligence and mischief, always plotting his next move. Contrasting with his natural skin, Stutz wears a sharp chef-inspired outfit—crisp white with bold red accents—complete with a tailored jacket and a slightly tilted chef’s hat that adds a touch of cunning charm to his persona. His long, nimble fingers peek out from under the sleeves, always ready to craft clever plans or whip up tricky deals. His voice is smooth and velvety, with a crooked grin that mixes charm and menace. Stutz is a master manipulator who weaves words like a chef seasons a dish—carefully, precisely, and with a twist you won’t see coming. Whether in the kitchen or the shadows, he’s always cooking up something unexpected, keeping everyone guessing what’s on the menu.</p>
+                    </div>
+                </div>
+
+                
+                <div class="mascot-card">
+                    <a href="mascots/mysti.html"><img src="https://i.imgur.com/XyZ9aBm.jpg" alt="The Animal" class="mascot-img"></a>
+                    <div class="mascot-info">
+                        <h3 style="text-transform:uppercase;">Mysti Minsk</h3>
+                        <p class="mascot-desc">Mysti Minsk is a mystical feline with fur that shimmers like moonlight woven with stardust — a dazzling swirl of deep midnight blue, soft lavender, and hints of sparkling silver that seem to dance with every graceful movement. Her delicate pink nose is perfectly poised, as if always sensing secrets hidden just beyond sight. Her large, luminous eyes glow with a mysterious emerald light, reflecting the wisdom of the ages and a hint of magic that draws others in. Mysti moves with the elegance of a fortune teller’s dance, her every step light and deliberate, as if she’s tracing the unseen paths of destiny itself. Though she wears no clothes, her natural beauty is enchanting enough — her fur patterns resembling celestial constellations, making her look like a living, breathing charm of good fortune and mystery. Soft purrs ripple from her, as if whispering ancient secrets and promising gentle guidance to those lucky enough to cross her path. Mysti Minsk isn’t just a cat — she’s a guardian of fortunes, a bearer of calm magic, and a graceful spirit who walks the fine line between the ordinary and the extraordinary.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-lights">
+                <div class="mini-light red"></div>
+                <div class="mini-light blue"></div>
+                <div class="mini-light yellow"></div>
+            </div>
+            <p>© 1950-2010 NEVER LAND CIRCUS</p>
+        </footer>
+    </div>
+    <script>
+// Titlul pulsează la fiecare 2 secunde
+setInterval(() => {
+    const title = document.querySelector('.neon');
+    if (title) {
+        title.style.filter = 'brightness(2)';
+        setTimeout(() => title.style.filter = '', 400);
+    }
+}, 2000);
+
+// Luminile clipesc random
+setInterval(() => {
+    document.querySelectorAll('.light, .mini-light').forEach(light => {
+        light.style.opacity = Math.random() * 0.5 + 0.7;
+        setTimeout(() => light.style.opacity = '', 300);
+    });
+}, 700);
+// Imaginile de istorie se măresc ușor la hover și revin la dimensiunea normală
+document.querySelectorAll('.history-img').forEach(img => {
+    img.addEventListener('mouseenter', () => {
+        img.style.transition = 'transform 0.2s';
+        img.style.transform = 'scale(1.15)';
+    });
+    img.addEventListener('mouseleave', () => {
+        img.style.transform = 'scale(1)';
+    });
+});
+</script>
+</body>
+</html>

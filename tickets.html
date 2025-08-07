@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Never Land - Tickets</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="vintage-border">
+        <div class="circus-lights">
+            <div class="light red"></div>
+            <div class="light blue"></div>
+            <div class="light yellow"></div>
+            <div class="light green"></div>
+            <div class="light purple"></div>
+        </div>
+        
+        <header>
+            <h1 class="neon">NEVER LAND CIRCUS</h1>
+            <p class="subtitle">TICKEST</p>
+        </header>
+        
+        <nav class="main-nav">
+            <button onclick="location.href='about.html'" class="nav-btn red">ABOUT</button>
+            <button onclick="location.href='mascots.html'" class="nav-btn blue">MASCOTS</button>
+            <button onclick="location.href='404.html'" class="nav-btn yellow">SHOWS</button>
+            <button onclick="location.href='index.html'" class="nav-btn red">HOME</button>
+        </nav>
+        
+        <main>
+            <div class="marquee">
+                <span>✨ TICKETS SOLD OUT • THANK YOU FOR YOUR INCREDIBLE SUPPORT • SEE YOU AT THE SHOW! ✨</span>
+            </div>
+            
+            <div class="poster-container">
+                <img src="https://i.imgur.com/JxQy3Fj.jpg" alt="BlackMire Circus Poster" class="main-poster">
+                <div class="starburst">
+                    <div class="starburst-content">
+                        SOLD<br>OUT!
+                    </div>
+                </div>
+            </div>
+            
+            <div class="welcome">
+                <h2>NO MORE TICKETS!</h2>
+                <p>We're sorry, but all tickets for this season are <span class="highlight-red">sold out</span>.<br>
+                Thank you for your overwhelming enthusiasm and support!</p>
+                
+                <div class="cta-box">
+                    <p>This season brings our most <span class="highlight-red">shocking</span> performances yet!</p>
+                    <button class="cta-button" disabled style="background:#888; color:#fff; cursor:not-allowed;">OUT OF TICKETS</button>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-lights">
+                <div class="mini-light red"></div>
+                <div class="mini-light blue"></div>
+                <div class="mini-light yellow"></div>
+            </div>
+            <p>© 1950-2010 NEVER LAND CIRCUS</p>
+        </footer>
+    </div>
+    <script>
+    // Titlul pulsează la fiecare 2 secunde
+    setInterval(() => {
+        const title = document.querySelector('.neon');
+        if (title) {
+            title.style.filter = 'brightness(2)';
+            setTimeout(() => title.style.filter = '', 400);
+        }
+    }, 2000);
+
+    // Luminile clipesc random
+    setInterval(() => {
+        document.querySelectorAll('.light, .mini-light').forEach(light => {
+            light.style.opacity = Math.random() * 0.5 + 0.7;
+            setTimeout(() => light.style.opacity = '', 300);
+        });
+    }, 700);
+
+    // Posterul tremură ușor la hover
+    const poster = document.querySelector('.main-poster');
+    if (poster) {
+        poster.addEventListener('mouseenter', () => {
+            poster.animate([
+                { transform: 'translateX(0px)' },
+                { transform: 'translateX(-4px)' },
+                { transform: 'translateX(4px)' },
+                { transform: 'translateX(0px)' }
+            ], { duration: 300, iterations: 2 });
+        });
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Never Land - Welcome</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="vintage-border">
+        <div class="circus-lights">
+            <div class="light red"></div>
+            <div class="light blue"></div>
+            <div class="light yellow"></div>
+            <div class="light green"></div>
+            <div class="light purple"></div>
+        </div>
+        
+        <header>
+            <h1 class="neon">NEVER LAND CIRCUS</h1>
+            <p class="subtitle">HOME</p>
+        </header>
+        
+        <nav class="main-nav">
+            <button onclick="location.href='about.html'" class="nav-btn red">ABOUT</button>
+            <button onclick="location.href='mascots.html'" class="nav-btn blue">MASCOTS</button>
+            <button onclick="location.href='404.html'" class="nav-btn yellow">SHOWS</button>
+            <button onclick="location.href='tickets.html'" class="nav-btn green">TICKETS</button>
+        </nav>
+        
+        <main>
+            <div class="marquee">
+                <span>✨ NOW PLAYING: THE GREAT NEVER LAND SPECTACLE • DAILY SHOWS AT 7PM • WEEKEND MATINEES AT 2PM • LIMITED TIME ONLY ✨</span>
+            </div>
+    
+            <div class="poster-container">
+                <div class="starburst">
+                    <div class="starburst-content">
+                        ONLY<br>$19.99!
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="welcome">
+                <h2>WELCOME TO NEVER LAND CIRCUS</h2>
+                <p>
+                    Welcome, welcome to Wonderland — a place where everything imaginable becomes reality. Here, you can find your favorite characters, hug them, play with them, and much more. Our staff is ready to make your experience as wonderful as possible. We put fun above all else and ensure you leave with a smile on your face, no matter what.
+                </p>
+            </div>
+            
+            <div class="welcome">
+                <h2>STEP RIGHT UP!</h2>
+                <p>Welcome to the most <span class="highlight-red">extraordinary</span>, <span class="highlight-blue">mystifying</span>, and <span class="highlight-yellow">awe-inspiring</span> show on earth! Since 1950, the NEVER LAND CIRCUS has thrilled audiences with:</p>
+                
+                <ul class="attraction-list">
+                    <li>🎪 Death-defying aerial acts</li>
+                    <li>🤹 World-class jugglers</li>
+                    <li>🎭 Bizarre sideshow wonders</li>
+                    <li>🦁 Exotic animal performances</li>
+                    <li>👻 Haunted attractions</li>
+                </ul>
+                
+                <div class="cta-box">
+                    <p>This season brings our most <span class="highlight-red">shocking</span> performances yet!</p>
+                    <button onclick="location.href='404.html'" class="cta-button">BUY TICKETS NOW</button>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <h2>EXPLORE OUR GROUNDS</h2>
+                <div class="map-container">
+                    <a href="map/map.html"><img src="img/map.png" alt="NEVER LAND CIRCUS Map" class="circus-map"></a>
+                    <div class="map-legend">
+                        <h3>CIRCUS MAP LEGEND</h3>
+                        <ul>
+                            <li><span class="legend-color red"></span> Main Big Top Tent</li>
+                            <li><span class="legend-color blue"></span> Freak Show Pavilion</li>
+                            <li><span class="legend-color yellow"></span> Tunnel of Terror</li>
+                            <li><span class="legend-color green"></span> Animal Menagerie</li>
+                            <li><span class="legend-color purple"></span> Fortune Teller's Row</li>
+                            <li><span class="legend-color black"></span> Restricted Areas</li>
+                        </ul>
+                        <p class="disclaimer">*Some areas may shift locations when unattended</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-lights">
+                <div class="mini-light red"></div>
+                <div class="mini-light blue"></div>
+                <div class="mini-light yellow"></div>
+            </div>
+            <p>© 1950-2010 NEVER LAND CIRCUS</p>
+        </footer>
+    </div>
+    <script>
+    // Titlul pulsează la fiecare 2 secunde
+    setInterval(() => {
+        const title = document.querySelector('.neon');
+        if (title) {
+            title.style.filter = 'brightness(2)';
+            setTimeout(() => title.style.filter = '', 400);
+        }
+    }, 2000);
+
+    // Luminile clipesc random
+    setInterval(() => {
+        document.querySelectorAll('.light, .mini-light').forEach(light => {
+            light.style.opacity = Math.random() * 0.5 + 0.7;
+            setTimeout(() => light.style.opacity = '', 300);
+        });
+    }, 700);
+
+    // Posterul tremură ușor la hover
+    const poster = document.querySelector('.main-poster');
+    if (poster) {
+        poster.addEventListener('mouseenter', () => {
+            poster.animate([
+                { transform: 'translateX(0px)' },
+                { transform: 'translateX(-4px)' },
+                { transform: 'translateX(4px)' },
+                { transform: 'translateX(0px)' }
+            ], { duration: 300, iterations: 2 });
+        });
+    }
+    </script>
+</body>
+</html>
